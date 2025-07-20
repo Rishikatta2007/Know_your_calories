@@ -20,7 +20,7 @@ A Flask-based app that predicts daily calorie needs, generates AI-powered meal p
 - Python, Flask, HTML/CSS
 - MySQL for user data
 - Pickle model for calorie prediction
-- OpenAI API for meal planning
+- Gemini API for meal planning
 - `.env` for environment variables
 
 ---
