@@ -1,0 +1,83 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #121212, #1f1f1f);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.15);
+    border: 1px solid #333;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.15);
+    font-weight: bold;
+    color: #ff9800;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff9800, #e09100);
+    color: #1f1f1f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 3px 10px rgba(255, 152, 0, 0.3);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #e09100, #c77800);
+    box-shadow: 0px 5px 15px rgba(255, 152, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}

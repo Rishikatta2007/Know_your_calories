@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/previous_data">Get Previous Data</a>
+        <a href="/nutrition">Food Calorie Counter</a>
+        <a href="/meal_planner">Meal Planner</a>
+        
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        <!-- Left Side: Input Form -->
+        <div class="input-section">
+            <h2>Enter Your Details</h2>
+            <form action="/submit" method="POST">
+                <label for="gender">Gender:</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="Male" required> Male</label>
+                    <label><input type="radio" name="gender" value="Female" required> Female</label>
+                </div>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
+
+                <label for="exercise">Physical Exercise:</label>
+                <select id="exercise" name="exercise" required>
+                    <option value="None">None</option>
+                    <option value="Moderate">Moderate (3-4 days/week)</option>
+                    <option value="Hard">Hard (5-6 days/week)</option>
+                </select>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" min="1" required>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" min="1" required>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- Right Side: Information -->
+        <div class="info-section">
+            <h2>About This Page</h2>
+            <p>
+                Our <b>Fitness Tracker</b> helps you monitor your daily health metrics by collecting basic details like <b>age, weight, height, and exercise habits</b>. 
+                With this information, we can calculate your <b>caloric needs</b> and suggest improvements for a healthier lifestyle.
+            </p>
+
+            <h2>Why Use This Website?</h2>
+            <p>
+                This platform is designed for <b>anyone looking to improve their fitness journey</b>. Whether you are a beginner or a fitness enthusiast, 
+                our tools, including the <b>Food Calorie Counter</b>, provide useful insights into how your diet and exercise impact your overall health.
+            </p>
+
+            <h2>What’s Next?</h2>
+            <p>
+                After submitting your details, you can access <b>previous data</b> and track your progress over time. Our system helps you <b>make better fitness choices</b> 
+                by giving you <b>data-driven insights</b> and motivation to achieve your health goals.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bottom: Image 
+    <div class="image-section">
+        <img src="{{ url_for('static', filename='fitness.jpg') }}" alt="Fitness Image">
+    </div>
+-->
+
+</body>
+</html>

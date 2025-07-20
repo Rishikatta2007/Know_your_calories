@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zigzag Diet Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='zigzag.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/main">Home</a>
+        <a href="/meal_planner">Meal Planner</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <div class="container">
+        <h2>Zigzag Diet Plan</h2>
+        <h3>{{ plan_type }} Calories</h3>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Caloric Intake</th>
+            </tr>
+            {% for i in range(7) %}
+            <tr>
+                <td>Day {{ i+1 }}</td>
+                <td>{{ week_plan[i] }} kcal</td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </div>
+</body>
+</html>

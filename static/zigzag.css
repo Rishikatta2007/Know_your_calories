@@ -1,0 +1,93 @@
+/* Dark Theme Background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+/* Navbar */
+.navbar {
+    background: #ff9800;
+    padding: 10px;
+}
+
+.navbar a {
+    color: #1f1f1f;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 152, 0, 0.3);
+    border: 1px solid #ff9800;
+}
+
+/* Headings */
+h2 {
+    color: #ff9800;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+th, td {
+    border: 1px solid #ff9800;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ff9800;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 152, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #1f1f1f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #e09100;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

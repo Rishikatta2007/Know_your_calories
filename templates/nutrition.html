@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Nutrition Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nutrition.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/main">Home</a>
+        <a href="/meal_planner">Meal Planner</a>
+        
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="container">
+        <!-- Left: Input Section -->
+        <div class="input-section">
+            <h2>Search Nutrition Info</h2>
+            <form method="POST">
+                <label for="food">Enter Food Name:</label>
+                <input type="text" id="food" name="food" placeholder="e.g., Banana" required>
+                <input type="submit" value="Get Info">
+            </form>
+        </div>
+
+        <!-- Right: Info Section -->
+        <div class="info-section">
+            <h2>Per 100g Nutrition Info</h2>
+            {% if nutrition_data %}
+            <table>
+                
+                <tr><td>Calories</td><td>{{ nutrition_data.calories }} kcal</td></tr>
+                <tr><td>Protein</td><td>{{ nutrition_data.proteins }}</td></tr>
+                <tr><td>Fat</td><td>{{ nutrition_data.fats }}</td></tr>
+                <tr><td>Carbohydrates</td><td>{{ nutrition_data.carbohydrates }}</td></tr>
+                
+            </table>
+            {% elif food_name %}
+            <p>No data found for "<strong>{{ food_name }}</strong>".</p>
+            {% else %}
+            <p>Enter a food item to see its nutritional value.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

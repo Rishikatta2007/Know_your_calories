@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='meal_planner.css') }}">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/previous_data">Previous Data</a>
+        <a href="/nutrition">Calorie Counter</a>
+        <a href="/meal_planner">Meal Planner</a>
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h2>Generate Your Meal Plan</h2>
+        <form method="POST">
+            <label for="calories">Daily Calorie Requirement:</label>
+            <input type="number" id="calories" name="calories" required>
+
+            <label for="meals">Number of Meals:</label>
+            <select id="meals" name="meals" required>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="preference">Food Preference:</label>
+<select id="preference" name="preference" required>
+    <option value="vegan">Vegan</option>
+    <option value="vegetarian">Vegetarian</option>
+    <option value="non-vegetarian">Non-Vegetarian</option>
+</select>
+
+            <label for="variations">Additional Notes / Variations:</label>
+            <textarea id="variations" name="variations" rows="3" placeholder="Any allergies, dislikes, or special goals?"></textarea>
+
+            <input type="submit" value="Generate Meal Plan" class="zigzag-btn">
+        </form>
+
+        {% if meal_plan %}
+            <div class="meal-plan-section">
+                <h3>Your Custom Meal Plan:</h3>
+                <pre>{{ meal_plan }}</pre>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

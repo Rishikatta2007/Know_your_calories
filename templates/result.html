@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/previous_data">Get Previous Data</a>
+        <a href="#">Food Calorie Counter</a>
+        
+        <a href="/logout">Logout</a>
+    </nav>
+
+    <div class="container2">
+        <h2>Your Calorie Results</h2>
+        <div class="results-box">
+            <div class="result-item">
+                <p><strong>Daily Required Calories:</strong></p>
+                <p>{{ prediction }} kcal</p>
+                <button onclick="window.location.href='{{ url_for('zigzag_plan', type='maintain', cal=prediction|int) }}'">
+                    ZigZag Plan
+                </button>
+            </div>
+            <div class="result-item">
+                <p><strong>Weight Loss Calories:</strong></p>
+                <p>{{ loss_calories }} kcal</p>
+                <button onclick="window.location.href='{{ url_for('zigzag_plan', type='loss', cal=loss_calories|int) }}'">
+                    ZigZag Plan
+                </button>
+            </div>
+            <div class="result-item">
+                <p><strong>Weight Gain Calories:</strong></p>
+                <p>{{ gain_calories }} kcal</p>
+                <button onclick="window.location.href='{{ url_for('zigzag_plan', type='gain', cal=gain_calories|int) }}'">
+                    ZigZag Plan
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
