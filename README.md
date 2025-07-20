@@ -24,3 +24,14 @@ A Flask-based app that predicts daily calorie needs, generates AI-powered meal p
 - `.env` for environment variables
 
 ---
+
+
+https://github.com/Rishikatta2007/Know_your_calories/blob/ebf00a843080b577a4a6d7b3f5d06be093206b00/1.1.1.jpeg
+
+https://github.com/Rishikatta2007/Know_your_calories/blob/ebf00a843080b577a4a6d7b3f5d06be093206b00/1.1.2.jpeg
+
+https://github.com/Rishikatta2007/Know_your_calories/blob/ebf00a843080b577a4a6d7b3f5d06be093206b00/1.1.3.jpeg
+
+https://github.com/Rishikatta2007/Know_your_calories/blob/ebf00a843080b577a4a6d7b3f5d06be093206b00/1.1.4.jpeg
+
+https://github.com/Rishikatta2007/Know_your_calories/blob/ebf00a843080b577a4a6d7b3f5d06be093206b00/1.1.5.jpeg
